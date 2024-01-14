@@ -1,4 +1,3 @@
-use std::fmt::format;
 
 use restaurant_client::config::Config;
 use restaurant_client::error::ClientError;

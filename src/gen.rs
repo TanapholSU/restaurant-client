@@ -85,7 +85,7 @@ impl TaskInfo{
     pub fn get_table_order_request_json_string(&self) -> Result<String, ClientError>{
         self.table_orders_request.as_ref()
             .ok_or_else(|| ClientError::SerializationError)
-            .and_then(|order| order.to_json().map_err(|x| ClientError::SerializationError))
+            .and_then(|order| order.to_json().map_err(|_| ClientError::SerializationError))
     }
 }
 
@@ -139,7 +139,7 @@ fn gen_single_task(config: &Config) -> TaskInfo {
 
 /// function generates random tasks 
 pub fn gen_all_tasks(config: &Config) -> Vec<TaskInfo>{
-    (0..config.get_max_request_tasks()).map(|id| gen_single_task(config)).collect()
+    (0..config.get_max_request_tasks()).map(|_| gen_single_task(config)).collect()
 }
 
 

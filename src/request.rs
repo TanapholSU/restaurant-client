@@ -1,7 +1,7 @@
 use reqwest::{blocking::{Client, Response}, header::CONTENT_TYPE, Error};
 use std::{thread::sleep, time::Duration};
 
-use crate::{gen::{TaskInfo, TaskKind}, config::Config, error::ClientError};
+use crate::{gen::{TaskInfo, TaskKind}, error::ClientError};
 use rayon::prelude::*;
 
 /// Function that converts response from reqwest to string. Then, put current thread to sleep for delay
