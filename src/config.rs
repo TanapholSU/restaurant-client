@@ -29,6 +29,8 @@ pub struct Config{
 
 
 impl Config{
+
+    /// this will affect the behavior of TaskInfo::new... functions as it will set all delay time to zero
     pub fn set_max_delay_time_to_zero(&mut self){
         self.max_delay_time_in_secs = None
     }

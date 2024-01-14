@@ -80,9 +80,6 @@ impl TaskInfo{
         Self {  kind: TaskKind::Remove, table_id, order_id: Some(order_id), table_orders_request: None, endpoint_url: endpoint, delay_time }
     }
 
-    pub fn get_order_id(&self) -> i32{
-        self.order_id.unwrap_or(-1)
-    }
 
     /// utility function to get json request from table order request (for add order operation) 
     pub fn get_table_order_request_json_string(&self) -> Result<String, ClientError>{
