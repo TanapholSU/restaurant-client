@@ -6,3 +6,16 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+clap = { version = "4.4.16", features = ["derive"] }
+rayon = "1.8.0"
+restaurant-server = {git = "https://github.com/TanapholSU/restaurant-server"}
+reqwest = { version = "0.11", features = ["json","blocking"] }
+dotenvy = "0.15.7"
+envy = "0.4.2"
+rand = "0.8.5"
+serde = { version = "1.0.195", features = ["derive"] } 
+serde_json = "1.0.111"
+thiserror = "1.0.56"
+
+tracing = "0.1.40"
+tracing-subscriber = {version = "0.3.18", features=["env-filter"]}
