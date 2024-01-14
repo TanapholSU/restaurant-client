@@ -23,7 +23,7 @@ MAX_ORDER_ID = 10                   # maximum order id to be sent for get specif
 ```
 
 # Usage
-To run test, run server application first. 
+To run test, run restaurant application service first. 
 
 ## Unit & Integration tests
 After setting `.env`, run  `cargo test` 
