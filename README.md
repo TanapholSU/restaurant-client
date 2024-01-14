@@ -3,7 +3,7 @@
 * This is restaurant client part of paidy's restaurant api task.
 * The idea is to build some kind of load testing the server (application) with several kind of tasks at once
 * The idea is to generate the tasks and their parameters randomly first. Then, using `rayon` to iterate over the generated tasks and call request functions in parallel
-  * using `rayon`, the code will become cleaner than making pool 
+  * using `rayon`, the code will become cleaner 
 * Some functions cannot be fully tested or unnecessary to test as it is already test the functionality on application server side or it relies on random
 
 
@@ -18,8 +18,7 @@ MAX_DELAY_TIME_IN_SECS = 0          # delay time of each generated task won't be
 MAX_REQUEST_TASKS = 100             # number of tasks to be generated  (larger -> longer time to test)
 MAX_TABLES = 10                     # maximum number of tables to request
 MAX_ORDERS_PER_REQUEST = 4          # maximum number of orders per request to be generated in add new orders task
-MAX_ORDER_ID = 10                   # maximum order id to be sent for get specific order / remove order tasks
-
+MAX_ORDER_ID = 10                   # maximum order id to be sent for get specific order / remove order tasks 
 ```
 
 # Usage
